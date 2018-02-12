@@ -1,15 +1,19 @@
-<div>
-    <material-input label="E-mail"
-                    [(ngModel)]="username">
-    </material-input>
+<div class="mdc-card">
+    <div>
+        <material-input label="E-mail"
+                        type="email"
+                        [(ngModel)]="username">
+        </material-input>
+    </div>
+    <div>
+        <material-input label="Password"
+                        type="password"
+                        [(ngModel)]="password"
+                        (keyup.enter)="submit()">
+        </material-input>
+    </div>
+    <material-button raised (trigger)="submit()"
+                     [disabled]="username.isEmpty || password.isEmpty">
+        Login
+    </material-button>
 </div>
-<div>
-    <material-input label="Password"
-                    [(ngModel)]="password"
-                    (keyup.enter)="submit()">
-    </material-input>
-</div>
-<material-button raised (trigger)="submit()"
-                 [disabled]="username.isEmpty || password.isEmpty">
-    Login
-</material-button>
