@@ -1,0 +1,7 @@
+<div *ngIf="appList != null">
+    <material-list>
+        <material-list-item *ngFor="let app of appList">
+            <div>{{app.name}}</div>
+        </material-list-item>
+    </material-list>
+</div>
