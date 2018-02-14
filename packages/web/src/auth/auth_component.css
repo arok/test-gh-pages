@@ -1,4 +1,27 @@
-#myButton {
-  background: green;
-  color: yellow;
+.my-card {
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.my-toolbar {
+  background: #38383C;
+  min-height: 96px;
+  position: relative;
+  color: white;
+  text-align: bottom;
+}
+.my-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 16px;
+  padding-left: 24px;
+}
+.my-input {
+  width: 300px;
+  text-align: left;
+}
+.my-button {
+  background: #f6b33e;
 }

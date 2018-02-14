@@ -1,19 +1,28 @@
-<div class="mdc-card">
-    <div>
-        <material-input label="E-mail"
-                        type="email"
-                        [(ngModel)]="username">
-        </material-input>
+<div style="text-align: center;">
+    <div class="mdc-card my-card">
+        <div class="my-toolbar">
+            <label class="mdc-typography--headline my-title">Welcome to Updraft</label>
+        </div>
+        <div style="text-align: center; padding: 24px 0px;">
+            <material-input class="my-input"
+                            label="E-mail"
+                            type="email"
+                            [(ngModel)]="username">
+            </material-input>
+        </div>
+        <div style="text-align: center;">
+            <material-input class="my-input"
+                            label="Password"
+                            type="password"
+                            [(ngModel)]="password"
+                            (keyup.enter)="submit()">
+            </material-input>
+        </div>
+        <div style="text-align: right; padding: 24px; position: absolute; bottom: 0; right: 0;">
+            <material-button raised (trigger)="submit()"
+                             [disabled]="username.isEmpty || password.isEmpty">
+                Login
+            </material-button>
+        </div>
     </div>
-    <div>
-        <material-input label="Password"
-                        type="password"
-                        [(ngModel)]="password"
-                        (keyup.enter)="submit()">
-        </material-input>
-    </div>
-    <material-button raised (trigger)="submit()"
-                     [disabled]="username.isEmpty || password.isEmpty">
-        Login
-    </material-button>
 </div>
