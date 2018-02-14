@@ -33438,7 +33438,9 @@ this.y1=o
 o=o.e
 this.x2=o
 this.x1.appendChild(o)
-this.x2.setAttribute("raised","")
+o=this.x2
+o.className="my-button"
+o.setAttribute("raised","")
 this.n(this.x2)
 o=this.c.Y(C.a9,this.a.z,null)
 x=new F.cA(o==null?!1:o)
