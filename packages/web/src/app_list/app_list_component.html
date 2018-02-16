@@ -1,7 +1,17 @@
 <div *ngIf="appList != null">
-    <material-list>
-        <material-list-item *ngFor="let app of appList">
-            <div>{{app.name}}</div>
-        </material-list-item>
-    </material-list>
+    <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+        <li class="mdc-list-item"
+            *ngFor="let app of appList"
+            (click)="onSelect(app)">
+            <span class="mdc-list-item__graphic">
+                <img class="mdc-list-item__graphic" src="{{app.version.icon}}" width="56" height="56">
+            </span>
+            <span class="mdc-list-item__text">
+                {{app.name}}
+                <span class="mdc-list-item__secondary-text">
+                    {{app.env}}
+                </span>
+            </span>
+        </li>
+    </ul>
 </div>
